@@ -1,0 +1,205 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static  '../static/styles/input.css' %}">
+    <title>Landing Page</title>
+</head>
+<body>
+    <nav class="flex flex-col md:flex-row lg:justify-between px-10 pt-4 pb-4">
+        <div class="flex justify-between">
+            <h1 class="font-bold lg:mt-3 text-blue-700 text-3xl lg:text-5xl lg:text-left">AiKBI</h1>
+            <div id="toggleBtn" onclick="toggle()" class="flex flex-col md:hidden w-[30px] mt-1">
+                <span class="bg-blue-700 p-[2px] my-[2px]"></span>
+                <span class="bg-blue-700 p-[2px] my-[2px]"></span>
+                <span class="bg-blue-700 p-[2px] my-[2px]"></span>
+            </div>
+        </div>
+        <div id="mob-menu" class="lg:flex-row lg:w-[50%] mx-auto lg:mx-0 text-center mt-5 justify-evenly">
+            <a href="#home"><ul class="text-xl lg:mt-2 lg:text-3xl font-semibold">Home</ul></a>
+            <a href="#explore"><ul class="text-xl lg:mt-2 lg:text-3xl font-semibold">Explore</ul></a>
+            <a href="#news"><ul class="text-xl lg:mt-2 lg:text-3xl font-semibold">News & Events</ul></a>
+            <a href="registration/" target="_blank">
+                <ul>
+                    <button class="text-white bg-blue-600 text-lg md:text-2xl font-semibold mt-3 lg:mt-0 px-5 py-3 rounded-xl mx-auto">
+                        Get Incubated
+                    </button>
+                </ul>
+            </a>
+        </div>
+    </nav>
+
+    <section id="home" class="bg-blue-600 flex w-[100%] h-[130vh] lg:h-[130%]">
+        <div class="flex flex-col lg:flex-row justify-between mx-auto mt-8 lg:mx-0 lg:mt-0">
+            <div class="px-4 py-4 lg:px-24 lg:py-16">
+                <h1 class="text-white font-semibold leading-tight text-[80px] lg:text-[200px]">Start.</h1>
+                <h1 class="text-white font-semibold leading-tight text-[80px] lg:text-[200px]">Develop.</h1>
+                <img src="./Images/VectorUnderline.png" alt="" class="hidden lg:block relative bottom-8">
+                <h1 class="text-white font-semibold leading-tight text-[80px] lg:text-[200px]">Grow.</h1>
+                <div class="bg-white hidden lg:block w-[65%] h-[20%] rounded-3xl text-orange-600 text-4xl text-center shadow-lg font-semibold px-5 pt-10 float-right mt-10">
+                    Empowering incubators to launch the business of tomorrow.
+                </div>
+            </div>
+            <div class="relative bottom-28 right-[10%] lg:bottom-0 lg:right-0 lg:mt-20 w-[100%] lg:mr-28">
+                <img src="{% static '../static/Images/photo-1-1@1x (1).png' %}" alt="" class="w-[70%] float-right rounded-md">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-col justify-around md:flex-row px-10">
+            <div>
+                <img src="{% static '../static/Images/photo-2-1@1x.png' %}" alt="" class="rotate-3">
+            </div>
+            <div class="mt-10 lg:mt-48 text-lg lg:text-4xl w-[90%] lg:w-[40%] text-center text-blue-800 font-semibold">
+               " Whether you're starting out, or scaling to meet demand,
+                connect with the right people, products and best practices 
+                to help your startup grow. "
+            </div>
+        </div>
+        <div class="w-[100%] flex">
+            <a href="registration/" class="text-white mx-auto my-10 md:mt-36 bg-blue-600 text-lg lg:text-3xl font-semibold px-5 py-3 lg:px-10 lg:py-8 rounded-xl hover:bg-white hover:text-blue-600 hover:border-4 hover:border-blue-600 shadow-2xl" target="_blank" rel="noopener noreferrer">
+                <button>
+                    Apply for Incubation
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="my-2">
+        <div class="bg-blue-600">
+            <div class="text-white font-semibold text-xl lg:text-4xl lg:w-[60%] px-5 lg:pl-28 lg:pt-32 lg:pb-20 py-3 text-center lg:text-left">
+                " Success is not final; failure is not fatal: it is the courage to continue that counts. "
+                <p class="mt-4 lg:mt-10 text-sm lg:text-xl font-medium">- Winston Churchill</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore" class="mt-20 lg:mt-40">
+        <h1 class="text-red-600 text-center font-semibold text-3xl lg:text-8xl">Our Featured Startups</h1>
+        <div id="carousel" class="mt-20 lg:mt-40" data-bs-ride="carousel">
+
+            <div class="carousel-card fade mb-5 flex flex-col-reverse lg:flex-row w-[90%] lg:w-[60%] mx-auto bg-blue-600 rounded-md lg:rounded-2xl p-5 lg:p-12">
+                <div class="">
+                    <span class="title text-orange-300 font-semibold text-xl ml-2 md:my-10 md:text-4xl md:ml-20">MANAGE APP</span>
+                    <p class="text-white mt-2 lg:mt-28 lg:ml-10 lg:w-[85%] lg:text-2xl lg:font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Expedita, in cupiditate. Tenetur modi assumenda
+                        laudantium excepturi rerum .
+                    </p>
+                </div>
+                <div class="bg-blue-700 shadow-lg rounded-md w-[100%] h-[250px] lg:h-[350px] mb-5 lg:mb-0">
+                </div>
+            </div>
+
+            <div class="carousel-card fade mb-5 flex flex-col-reverse lg:flex-row w-[90%] lg:w-[60%] mx-auto bg-blue-600 rounded-md lg:rounded-2xl p-5 lg:p-12">
+                <div class="">
+                    <span class="title text-orange-300 font-semibold text-xl ml-2 md:my-10 md:text-4xl md:ml-20">Laundry & Go</span>
+                    <p class="text-white mt-2 lg:mt-28 lg:ml-10 lg:w-[85%] lg:text-2xl lg:font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Expedita, in cupiditate. Tenetur modi assumenda
+                        laudantium excepturi rerum .
+                    </p>
+                </div>
+                <div class="bg-blue-700 shadow-lg rounded-md w-[100%] h-[250px] lg:h-[350px] mb-5 lg:mb-0">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="w-[100%] flex mb-10">
+            <a href="{% url 'knowmore' %}" class="text-white mx-auto my-10 lg:mt-36 bg-blue-600 text-lg lg:text-3xl font-semibold px-5 py-3 lg:px-20 lg:py-8 rounded-xl hover:bg-white hover:text-blue-600 hover:border-4 hover:border-blue-600 shadow-2xl" rel="noopener noreferrer">
+                <button>
+                    Know More
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="flex flex-col lg:flex-row mt-24 lg:mt-36">
+        <div class="">
+            <img src="{% static '../static/Images/photo41.png' %}" alt="" />
+        </div>
+        <div class="px-10">
+            <h1 class="text-center text-blue-600 mt-10 text-xl font-semibold lg:text-7xl lg:mb-28">Learn from Events & Workshops</h1>
+            <div class="flex justify-evenly mt-5 mx-5 lg:[60%]">
+                <div class="w-10 h-6 lg:w-20 lg:h-16 bg-orange-600 rounded-sm lg:rounded-lg p-1 lg:p-4">
+                    <img src="{% static '../static/Images/tick 1.png' %}" alt="" class="w-[100%] h-auto">
+                </div>
+                <div class="">
+                    <span class="text-orange-600 font-semibold ml-3 lg:text-5xl">Expert sessions</span>
+                    <p class="font-semibold mt-3 lg:mt-10 lg:text-3xl">
+                        We keep bringing up expert sessions so that you can learn from experts in the field.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-evenly mt-5 lg:mt-20 mx-5 lg:[60%]">
+                <div class="w-10 h-6 lg:w-20 lg:h-16 bg-orange-600 rounded-sm lg:rounded-lg p-1 lg:p-4">
+                    <img src="{% static '../static/Images/tick 1.png' %}" alt="" class="w-[100%] h-auto">
+                </div>
+                <div class="">
+                    <span class="text-orange-600 font-semibold ml-3 lg:text-5xl">Group to group mentorship</span>
+                    <p class="font-semibold mt-3 lg:mt-10 lg:text-3xl">
+                        We guide every group of incubators who are keen to grow and launch their startups.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-evenly mt-5 lg:mt-20 mx-5 lg:[60%]">
+                <div class="w-10 h-6 lg:w-20 lg:h-16 bg-orange-600 rounded-sm lg:rounded-lg p-1 lg:p-4">
+                    <img src="{% static '../static/Images/tick 1.png' %}" alt="" class="w-[100%] h-auto">
+                </div>
+                <div class="">
+                    <span class="text-orange-600 font-semibold ml-3 lg:text-5xl">Interaction with other Incubators</span>
+                    <p class="font-semibold mt-3 lg:mt-10 lg:text-3xl">
+                        Connect with other hustlers who are working to grow as a team. Connect ,collab and grow together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="mt-20">
+        <div class="bg-blue-600 flex flex-col lg:flex-row">
+            <div class="text-white font-semibold text-xl lg:text-4xl lg:w-[60%] px-5 lg:pl-28 lg:pt-32 lg:pb-20 py-3 text-center lg:text-left">
+                For latest News & Events details
+            </div>
+            <a href="https://docs.google.com/forms/d/1QCsfrtG7gbU7haBA8HL6Yar7AUz9fxCA_jK6tJpiWqs/edit" class="text-black mx-auto my-10 md:mt-36 bg-white text-lg lg:text-3xl font-semibold px-5 py-3 lg:px-20 lg:py-8 rounded-xl hover:text-blue-600 hover:border-4 hover:border-red-600 shadow-2xl" target="_blank" rel="noopener noreferrer">
+                <button>
+                    Click Here
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <footer class="mt-24">
+        <h1 class="text-center font-bold text-5xl text-blue-600 lg:text-8xl">AiKBI</h1>
+        <div class="flex flex-col lg:flex-row justify-evenly text-center text-xl lg:text-3xl font-semibold text-slate-600 my-16">
+            <a href="#home"><ul>Home</ul></a>
+            <a href="#explore"><ul>Explore</ul></a>
+            <a href="#news"><ul>News & Events</ul></a>
+            <a href="https://docs.google.com/forms/d/1QCsfrtG7gbU7haBA8HL6Yar7AUz9fxCA_jK6tJpiWqs/edit"><ul>Get Incubated</ul></a>
+        </div>
+        <div class="flex justify-evenly mx-6 lg:mx-80">
+            <div class="">
+                <img src="{% static '../static/Images/insta.png' %}" class="w-7 lg:w-12" alt="">
+            </div>
+            <div class="">
+                <img src="{% static '../static/Images/fb.png' %}" class="w-7 lg:w-12" alt="">
+            </div>
+            <div class="">
+                <img src="{% static '../static/Images/tweet.png' %}" class="w-7 lg:w-12" alt="">
+            </div>
+        </div>
+        <div class="font-semibold text-center text-xl text-blue-600 mt-20">&copy; 2022 AIKBI</div>
+    </footer>
+
+    <script src="{% static '../static/js/index.js' %}"></script>
+</body>
+</html>

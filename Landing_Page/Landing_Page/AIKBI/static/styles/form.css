@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+
+}
+
+html,
+body {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --color-primary: #155FEA;
+    --color-background: #b9cff9;
+    --color-secondary:
+        #F8202E;
+    --color-light: #FFC95F;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-footer: #F8F1F0;
+
+    --container-size-lg: 80%;
+    --container-size-md: 90%;
+    --container-size-sl: 98%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+}
+
+.container {
+    width: var(--container-size-lg);
+    margin: 0rem auto;
+}
+
+
+/* =============FORM CSS=============== */
+
+.form-headline {
+    background-color: var(--color-white);
+    margin-top: 2rem;
+    padding: 2.5rem 5rem;
+    border-top: 0.8rem solid var(--color-primary);
+    text-align: center;
+    border-radius: 0.9rem;
+
+}
+
+.form-headline h1 {
+    font-size: 3rem;
+}
+
+.form-headline p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 4rem;
+}
+
+form {
+    padding-bottom: 5rem;
+}
+
+input {
+    width: 100%;
+    border-bottom: 2px solid #bfbfbf;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    color: #404040;
+    font-weight: 400;
+    transition: border-bottom 400ms ease-in-out;
+
+
+}
+
+form div {
+    background-color: var(--color-white);
+    margin: 3rem 0rem;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: .9rem;
+}
+
+label {
+    margin-bottom: 2.3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+span:not(.other) {
+    position: relative;
+    bottom: 0.4rem;
+    color: #df0715;
+}
+
+.other {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 4rem;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.research {
+    width: max-content;
+    margin-top: 1.8rem;
+    margin-right: 0.5rem;
+    font-weight: 400;
+}
+
+.company-input {
+    display: block;
+}
+
+.company-input label:not(#company-type) {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#industry {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.options {
+    margin: 0rem;
+    width: max-content;
+    padding: 1.7rem;
+    border: 1px solid #d9d9d9;
+    border-radius: .5rem;
+
+}
+
+.funding-input {
+    display: block;
+}
+
+.funding-type {
+    width: max-content;
+    margin-top: 1.8rem;
+    margin-right: 0.5rem;
+    font-weight: 400;
+}
+
+.funding-input label:not(#funding-type) {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.more-input label .title {
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 3.5rem;
+}
+
+.more-input label p {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.development-input,
+#development-type {
+    display: block;
+}
+
+.development-input .status {
+    width: max-content;
+    margin-top: 1.8rem;
+    margin-right: 0.5rem;
+    font-weight: 400;
+}
+
+#Others {
+
+    margin-top: 1rem;
+}
+
+#submit {
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    background-color: var(--color-background);
+    flex-direction: row;
+}
+
+#reset {
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* =======RESPONSIVE CSS */
+@media screen and (max-width:1024px) {
+    .container {
+        width: var(--container-size-md);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        width: var(--container-size-sl);
+    }
+
+    .options {
+        padding: 0.7rem;
+    }
+
+    #industry {
+        font-size: 1.5rem;
+    }
+
+    .form-headline p {
+        font-size: 1.4rem;
+
+        line-height: 2rem;
+    }
+
+    .form-headline h1 {
+        font-size: 2rem;
+    }
+
+    .other {
+        line-height: 2rem;
+    }
+
+    .more-input label .title {
+        line-height: 2rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .form-headline {
+
+        padding: 2.5rem 1rem;
+    }
+
+    .form-headline p {
+        font-size: 1.4rem;
+    }
+
+    form div {
+        padding: 2.5rem 1.5rem;
+    }
+}

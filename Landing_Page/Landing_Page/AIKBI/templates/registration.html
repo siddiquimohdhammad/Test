@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static  '../static/styles/form.css' %}">
+    <title>Form</title>
+</head>
+
+<body>
+    {% if submitted %}
+            Your registration Done Successfully
+    
+    {% else %}
+
+        <div class="container root-container">
+            <div class="form-headline">
+                <h1>Kalsekar Incubation Centre</h1>
+                <p>“Nurturing innovation through a collaborative community of entrepreneurs.”</p>
+            </div>
+            
+            
+
+            <form action="/registration/" method=POST>
+                {% csrf_token %}
+
+                <div class="email-input">
+                    <label for="email">Email <span> &lowast;</span> </label>
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                </div>
+                <div class="startup-input">
+                    <label for="startup-name">Startup Name <span> &lowast;</span>
+                    </label>
+                    <input type="text" name="startup_name" id="startup_name" placeholder="Name of Startup" required>
+                </div>
+                <div class="website-input">
+                    <label for="website">Website URL of Startup (If Any)<span> &lowast;</span>
+                    </label>
+                    <input type="url" name="website_url" id="website_url" placeholder="URL of your Website">
+                </div>
+                <div class="email-address-input">
+                    <label for="email">Email Address <span> &lowast;</span>
+                        <br>
+                        <span class="other">It can be your personal email or your startup email id</span>
+
+                    </label>
+                    <input type="email" name="startup_email" id="startup_email" placeholder="Your answer" required> 
+                </div>
+                <div class="phone-input">
+                    <label for="phone">Mobile Number <span> &lowast;</span>
+                    </label>
+                    <input type="number" name="mobile" id="mob" placeholder="Your answer" required maxlength=10>
+                </div>
+                <div class="founder-input">
+                    <label for="founder">Founder Name <span> &lowast;</span>
+                    </label>
+                    <input type="text" name="founder_name" id="founder_name" placeholder="Your answer" required>
+                </div>
+                <div class="team-input">
+                    <label for="team">Details of Each Team Member <span> &lowast;</span>
+                        <br>
+                        <span class="other">Note : At least one participant from Aiktc is mandatory</span> </label>
+                    <input type="text" name="details" id="deails" placeholder="Your answer" required>
+                </div>
+                <div class="company-input">
+                    <label id="company-type">Company Type
+                        <span> &lowast;</span></label> <br>
+                        <input type="text" name="company_type" id="company_type" placeholder="Company Type" required>
+                </div>
+                <div class="industry-input">
+                    <label>Industry
+                        <span> &lowast;</span>
+                    </label>
+                    <input type="text" name="industry" id="industry" placeholder="Industry name">
+
+                </div>
+                <div class="startup-input">
+                    <label for="Startup">Title of Startup<span> &lowast;</span>
+                        <br>
+                        <span class="other">For example: One line to explain Uber is: Book the cab in real time from a
+                            mobile app.</span>
+                    </label>
+                    <input type="text" name="title_startup" id="title_startup" placeholder="Your answer" required>
+                </div>
+                <div class="description-input">
+                    <label for="Description">Description
+                        <span> &lowast;</span>
+                        <br>
+                        <span class="other">Please include any further information that you wish to communicate to us to
+                            help us in judging your application.
+                        </span>
+                    </label>
+                    <input type="text" name="description" id="description" placeholder="Your answer" required>
+                </div>
+                <div class="funding-input">
+                    <label id="funding-type">Funding Type<span> &lowast;</span>
+                        <input type="text" name="funding_type" id="funding_type" placeholder="(Angel, seeding, none)" required>
+                </div>
+                <div class="more-input">
+                    <label for="more">More Info
+
+                        <span> &lowast;</span>
+                        <br>
+                        <span class="title">Please tell us more by answering the following questions concerning your title.
+                        </span>
+                        <p>
+                            1.What is already available in the Market? <br>
+                            Ans: <br>
+                            2.What is market potential? <br>
+                            Ans: <br>
+                            3.What value it would add in market? <br>
+                            Ans: <br>
+                        </p>
+                    </label>
+                    <input type="text" name="more_info" id="more_info" placeholder="Your answer" required>
+                </div>
+
+                <div class="development-input">
+                    <label id="development-type">Current Development Status
+                        <span> &lowast;</span></label>
+                        <input type="text" name="current_status" id="current_status" placeholder="(Still idea, Ready to launch, others)" required>
+                
+
+                </div>
+
+                <div class="pitch-input">
+                    <label for="pitch">Your Pitch Deck<span> &lowast;</span>
+                        <br>
+                    </label>
+                    <input type="text" name="pitch_deck" id="pitch" placeholder="Paste the link">
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="submit">Submit</button>
+                    <button type="reset" id="reset">Clear Form</button>
+                </div>
+            </form>
+        </div>
+        
+    {% endif %}
+</body>
+
+</html>

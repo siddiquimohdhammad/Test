@@ -1,0 +1,94 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Know More</title>
+    <link rel="stylesheet" href="{% static '../static/styles/knowmore.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="navbar-header">
+                    <span class="navbar-nav navbar-left ai-kbi">AiKBI</span>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="toggle">
+
+                    <ul class="nav navbar-nav navbar-right nav-style">
+                        <li><a href="./index.html#home place">Home</a></li>
+                        <li><a href="./index.html#explore">Explore</a></li>
+                        <li><a href="./index.html#news">News &amp; Events</a></li>
+                        <li><a href="registration/"
+                                target="_blank">Get Incubated</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="rows">
+            <div class="col-lg-3 "></div>
+            <div class="col-lg-6">
+                <div class="frame1">
+                    <img class="center-block img-responsive" id="frame1-content" src="{%static '../static/Images/frame1-content.png'%}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3 "></div>
+        </div>
+            <div class="rows">
+                <div class="col-lg-3 "></div>
+                <div class="col-lg-6">
+                    <div class="frame2">
+                        <img class="center-block img-responsive" id="frame2-content" src="{%static '../static/Images/frame2-content.png'%}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 "></div>
+            </div>
+                <div class="rows">
+                    <div class="col-lg-3 "></div>
+                    <div class="col-lg-6">
+                        <div class="frame3">
+                            <img class="center-block img-responsive" id="frame3-content" src="{%static '../static/Images/frame3-content.png'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 "></div>
+                </div>
+                    <div class="rows">
+                        <div class="col-lg-3 "></div>
+                        <div class="col-lg-6">
+
+                            <div class="frame4">
+                                <img class="center-block img-responsive" id="frame4-content" src="{%static '../static/Images/frame4-content.png'%}" alt="">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 "></div>
+                    </div>
+                        <div class="rows">
+                            <div class="col-lg-3 "></div>
+                            <div class="col-lg-6">
+                                <div class="frame5">
+                                    <img class="center-block img-responsive" id="frame5-content" src="{%static '../static/Images/frame5-content.png'%}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 "></div>
+                        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#mob-menu{
+    display: flex;
+}
+
+.carousel-card{
+    position: relative;
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: moveRight;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes moveRight {
+    from {left: 0; opacity: 0.5;}
+    to {left: 100%; opacity: 1;}
+}
+
+@media screen and (max-width: 900px) {
+    #mob-menu{
+        display: none;
+    }
+}
